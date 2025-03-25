@@ -1,0 +1,9 @@
+trainer:
+  batch_size: 1
+
+loader:
+  root: {"KRIC": "/mnt/14ba01cd-6426-47d6-a13b-9429b93965bb/lwx/downloads/TCGA-KIRC/"}
+  image_size: {"KRIC": [512, 512]}
+  processed_dir: {"KRIC": "./processed/"}
+  target_level: {"KRIC": 1}
+  num_workers: 0
