@@ -3,6 +3,9 @@ trainer:
   batch_size: 1
   projects: ["KRIC"]
 
+finetune:
+  checkpoint: data_check
+
 loader:
   num_workers: 0
   train_ratio: 0.7
@@ -12,7 +15,7 @@ loader:
       root: "/root/.cache/huggingface/forget/datasets/TCGA-KRIC/",
       processed_dir: "/root/.cache/huggingface/forget/datasets/TCGA-KRIC/processed/",
       image_size: [512, 512], # patch size
-      n_tiles: 5, # Get the first n slices by score
+      n_tiles: 10, # Get the first n slices by score
       target_level: 1, # Magnification level of the slice, 0 is the largest, 2 is the smallest
       transforms: {
           hf: 0.5, # Random vertical flip Probability
